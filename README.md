@@ -4,7 +4,7 @@ This project demonstrates the implementation and management of Access Control Li
 This project demenstrates the implementation of Access Control Lists(ACLs) using cisco packet tracer .
 ## Creation of the ACL
 ```markdown
-Correct ordering of ACL entries (ACEs).```
+Correct ordering of ACL entries (ACEs).
 
 ```cisco
 Router(config)# access-list 1 deny 192.168.1.10 0.0.0.0
