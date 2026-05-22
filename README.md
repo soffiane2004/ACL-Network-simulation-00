@@ -44,14 +44,31 @@ Router(config-if)# ip access-group BLOCK_HTTP in
 the process of deleting an ACL and its ACEs .
 ```
 ```markdown
-Deleting an extended ACL
+Deleting an extended ACL numbered
 ```
 ![deleting process](acl-delete.png)
 ```markdown
-Deleting an extended ACL
+Deleting an standard ACL numbered
+```
+```cisco
+Router(config)# no access-list 1
+```
+```markdown
+Deleting an extended ACL named
+```
+```cisco
+Router(config)# no ip access-list extended BLOCK_HTTP
+```
+```markdown
+Deleting an standard ACL named
+```
+```cisco
+Router(config)# no ip access-list standard BLOCK_PC
 ```
 ## Apply in the interface
+```markdown
 this picture shows the commands used to apply ACLs on the interface.
+```
 ![how to apply](acl-interface.png)
 ## Cnfiguration
 basic router configuration commands and router DHCP.
