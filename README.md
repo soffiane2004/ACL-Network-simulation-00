@@ -40,8 +40,16 @@ Router(config)# interface fa0/1
 Router(config-if)# ip access-group BLOCK_HTTP in
 ```
 ## Delete an ACL 
+```markdown
 the process of deleting an ACL and its ACEs .
+```
+```markdown
+Deleting an extended ACL
+```
 ![deleting process](acl-delete.png)
+```markdown
+Deleting an extended ACL
+```
 ## Apply in the interface
 this picture shows the commands used to apply ACLs on the interface.
 ![how to apply](acl-interface.png)
