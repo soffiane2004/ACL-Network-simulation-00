@@ -10,7 +10,8 @@ Correct ordering of ACL entries (ACEs).
 Router(config)# access-list 1 deny 192.168.1.10 0.0.0.0
 Router(config)# access-list 1 permit any
 Router(config)# interface fa0/0
-Router(config-if)# ip access-group 1 in```
+Router(config-if)# ip access-group 1 in
+```
 
 ![Creation process](acl-creation.png)
 
