@@ -39,7 +39,7 @@ Router(config-ext-nacl)# permit ip any any
 Router(config)# interface fa0/1
 Router(config-if)# ip access-group BLOCK_HTTP in
 ```
-## Delete an ACL 
+## Delete an ACL completely
 ```markdown
 the process of deleting an ACL and its ACEs .
 ```
@@ -67,16 +67,42 @@ Router(config)# no ip access-list standard BLOCK_PC
 ```
 ## Apply in the interface
 ```markdown
-this picture shows the commands used to apply ACLs on the interface.
+Apply numbered ACL standard/extended
 ```
-![how to apply](acl-interface.png)
+```cisco
+ip access-group 1 or 110 in
+```
+```markdown
+Apply namaed ACL standard/extended
+```
+```cisco
+ip access-group BLOCK_HTTP or BLOCK_PC in
+```
+## Delete from the interface 
+```markdown
+Delete an nubered ACL from an interface
+```
+```cisco
+Router(config-if)# no ip access-group 1 or 110 in
+```
+```markdown
+Delete an named ACL from an interface
+```
+```cisco
+Router(config-if)# no ip access-group BLOCK_HTTP in
+```
 ## Cnfiguration
+```markdown
 basic router configuration commands and router DHCP.
-
+```
 ![basic conf](basic-config.jpg)
 ## Project picture
+```markdown
 logical topology of the project .
+```
 ![logical topology](logical-topology.png)
 ## Project picture
+```markdown
 physical topology of the project .
+```
 ![physical topology](physical-topology.png)
