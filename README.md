@@ -3,7 +3,17 @@ This project demonstrates the implementation and management of Access Control Li
 ## Access Control Lists Simulation
 This project demenstrates the implementation of Access Control Lists(ACLs) using cisco packet tracer .
 ## Creation of the ACL
-Correct ordering of ACL entries (ACEs) .
+```markdown
+Correct ordering of ACL entries (ACEs).```
+
+```cisco
+Router(config)# access-list 1 deny 192.168.1.10 0.0.0.0
+Router(config)# access-list 1 permit any
+Router(config)# interface fa0/0
+Router(config-if)# ip access-group 1 in```
+
+![Creation process](acl-creation.png)
+
 ![Creation process](acl-creation.png)
 ## Delete an ACL 
 the process of deleting an ACL and its ACEs .
@@ -12,7 +22,8 @@ the process of deleting an ACL and its ACEs .
 this picture shows the commands used to apply ACLs on the interface.
 ![how to apply](acl-interface.png)
 ## Cnfiguration
-basic router configuration commands .
+basic router configuration commands and router DHCP.
+
 ![basic conf](basic-config.jpg)
 ## Project picture
 logical topology of the project .
