@@ -6,21 +6,39 @@ This project demenstrates the implementation of Access Control Lists(ACLs) using
 ```markdown
 Correct ordering of ACL entries (ACEs).
 ```
-
-
-
-
-
+```markdown
+Standard ACL numbered
+```
 ```cisco
 Router(config)# access-list 1 deny 192.168.1.10 0.0.0.0
 Router(config)# access-list 1 permit any
 Router(config)# interface fa0/0
 Router(config-if)# ip access-group 1 in
 ```
-
-![Creation process](acl-creation.png)
-
-![Creation process](acl-creation.png)
+```markdown
+Extended ACL numbered
+```
+![Extended ACL numbered](acl-creation.png)
+```markdown
+Standard ACL named
+```
+```cisco
+Router(config)# ip access-list standard BLOCK_PC
+Router(config-std-nacl)# deny 192.168.1.10 0.0.0.0
+Router(config-std-nacl)# permit any
+Router(config)# interface fa0/0
+Router(config-if)# ip access-group BLOCK_PC in
+```
+```markdown
+Extended ACL named
+```
+```cisco
+Router(config)# ip access-list extended BLOCK_HTTP
+Router(config-ext-nacl)# deny tcp 192.168.1.0 0.0.0.255 any eq 80
+Router(config-ext-nacl)# permit ip any any
+Router(config)# interface fa0/1
+Router(config-if)# ip access-group BLOCK_HTTP in
+```
 ## Delete an ACL 
 the process of deleting an ACL and its ACEs .
 ![deleting process](acl-delete.png)
